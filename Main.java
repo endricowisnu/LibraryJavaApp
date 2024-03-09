@@ -1,6 +1,6 @@
 package Tugas_kelompok;
+
 import java.io.IOException;
-//import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -9,8 +9,10 @@ public class Main {
         DaftarBuku daftarBuku = new DaftarBuku();
         char lanjut;
 
-        do{
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        do {
+            // Clear terminal
+            new ProcessBuilder("clear").inheritIO().start().waitFor();
+
             System.out.println("======PERPUSTAKAAN ONLINE======");
             System.out.println("1. Menambah buku ");
             System.out.println("2. Menampilkan Daftar buku ");
@@ -20,8 +22,8 @@ public class Main {
             int input = scanner.nextInt();
             System.out.println();
 
-            if(input == 1){
-            // Menambahkan buku
+            if (input == 1) {
+                // Menambahkan buku
                 scanner.nextLine();
                 System.out.println("=====Menambahkan Buku=====");
                 System.out.print("Masukkan judul buku          : ");
@@ -32,7 +34,6 @@ public class Main {
                 int tahunTerbit = scanner.nextInt();
                 System.out.print("Jenis buku (fiksi/non-fiksi) : ");
                 String jenisBuku = scanner.next();
-
 
                 if (jenisBuku.equalsIgnoreCase("fiksi")) {
                     System.out.print("Masukkan genre buku\t     : ");
@@ -47,13 +48,13 @@ public class Main {
                 }
             }
 
-            if(input == 2){
+            if (input == 2) {
                 // Menampilkan daftar buku
                 System.out.println("=====Daftar Buku=====");
                 daftarBuku.tampilkanDaftarBuku();
             }
 
-            if(input == 3){
+            if (input == 3) {
                 // Mencari buku
                 System.out.println("=====Mencari Buku=====");
                 System.out.print("Masukkan judul buku yang ingin dicari : ");
@@ -70,7 +71,7 @@ public class Main {
                 }
             }
 
-            if(input == 4){
+            if (input == 4) {
                 // Menghapus buku
                 scanner.nextLine();
                 System.out.println("=====Menghapus Buku=====");
@@ -89,7 +90,6 @@ public class Main {
             System.out.println();
             System.out.print("Apakah ingin menginput menu lagi (y/n)? ");
             lanjut = scanner.next().charAt(0);
-        }while(Character.toLowerCase(lanjut) == 'y');
+        } while (Character.toLowerCase(lanjut) == 'y');
     }
 }
-
