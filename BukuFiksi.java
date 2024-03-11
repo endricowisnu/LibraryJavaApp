@@ -3,6 +3,7 @@ package Tugas_kelompok;
 public class BukuFiksi extends Buku {
     private String genre;
 
+
     public BukuFiksi(String judul, String penulis, int tahunTerbit, String genre) {
         super(judul, penulis, tahunTerbit);
         this.genre = genre;

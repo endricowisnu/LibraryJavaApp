@@ -40,11 +40,14 @@ public class Main {
                     String genre = scanner.next();
                     BukuFiksi bukuFiksi = new BukuFiksi(judul, penulis, tahunTerbit, genre);
                     daftarBuku.addBuku(bukuFiksi);
+                    bukuFiksi.tampilkanInfo();
+
                 } else if (jenisBuku.equalsIgnoreCase("non-fiksi")) {
                     System.out.print("Masukkan genre buku\t     : ");
                     String genre = scanner.next();
                     BukuNonFiksi bukuNonFiksi = new BukuNonFiksi(judul, penulis, tahunTerbit, genre);
                     daftarBuku.addBuku(bukuNonFiksi);
+                    bukuNonFiksi.tampilkanInfo();
                 }
             }
 

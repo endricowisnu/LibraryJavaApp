@@ -5,10 +5,12 @@ public class DaftarBuku {
     private ArrayList<Buku> daftarBuku;
 
     public DaftarBuku() {
+
         daftarBuku = new ArrayList<>();
     }
 
     public void addBuku(Buku buku) {
+
         daftarBuku.add(buku);
     }
 
@@ -28,7 +30,7 @@ public class DaftarBuku {
     public void tampilkanDaftarBuku() {
         for (Buku buku : daftarBuku) {
             buku.tampilkanInfo();
-            System.out.println();
+            System.out.println(buku);
         }
     }
 }
